@@ -32,26 +32,31 @@ public class Coleccines_Ej_1 {
             rta = leer.next();
 
         } while ("si".equalsIgnoreCase(rta));
-        
-         System.out.println(" RAZAS ");
-         System.out.println("");
-        
+
+        System.out.println(" RAZAS ");
+        System.out.println("");
+
         for (String lista : razaPerros) {
-           
+
             System.out.println(lista);
         }
-        
-        System.out.println( " TOTAL PERROS  : "+ razaPerros.size());
-        
+
+        System.out.println(" TOTAL PERROS  : " + razaPerros.size());
+
         System.out.println(" INGRESE LA RAZA Q NO DEBE ESTAR EN LA LISTA : ");
-        razaElim=leer.next();
-        Iterator<String>mi_iterador=razaPerros.iterator();
-        
-        while(mi_iterador.hasNext()){
-            if (mi_iterador.equals(razaElim))
+        razaElim = leer.next();
+        Iterator<String> mi_iterador = razaPerros.iterator();
+
+        while (mi_iterador.hasNext()) {
+            String it = mi_iterador.next();
+            if (it.equals(razaElim)) {
                 mi_iterador.remove();
+                System.out.println(razaPerros);
+
         }
-        System.out.println();
+
     }
 
+    }
 }
+
